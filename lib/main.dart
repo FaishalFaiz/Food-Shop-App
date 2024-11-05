@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/presentation/screen/detail_screen.dart';
 import 'package:food_app/presentation/screen/home_page.dart';
 
 void main() {
@@ -12,7 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      routes: {
+        '/': (context) => HomePage(),
+        '/detail': (context) => DetailScreen(),
+      },
     );
   }
 }
